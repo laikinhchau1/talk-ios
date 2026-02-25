@@ -1,0 +1,14 @@
+/* 
+  InfoPlist.strings
+  Nextcloud Talk
+
+  SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+  SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
+NSCameraUsageDescription = "Máy ảnh được sử dụng trong cuộc gọi video";
+NSMicrophoneUsageDescription = "Micrô được sử dụng trong cuộc gọi thoại và video";
+NSPhotoLibraryUsageDescription = "Cần quyền truy cập Thư viện Ảnh để chia sẻ hình ảnh và video từ thiết bị của bạn";
+NSContactsUsageDescription = "Cần quyền truy cập Danh bạ để khớp danh bạ của bạn với các liên hệ trong máy chủ";
+NSLocationWhenInUseUsageDescription = "Cần quyền truy cập để chia sẻ vị trí của bạn với ngườí khác";
+NSSpeechRecognitionUsageDescription = "Cần quyền truy cập Nhận diện Giọng nói để chuyển đổi tin nhắn thoại thành văn bản bằng nhận diện trên thiết bị";

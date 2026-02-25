@@ -9,9 +9,9 @@
 		<string>$(PRODUCT_BUNDLE_IDENTIFIER).processing</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>vi</string>
 	<key>CFBundleDisplayName</key>
-	<string>Nextcloud Talk</string>
+	<string>HPA Talk</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -30,7 +30,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.nextcloud.Talk</string>
+			<string>com.hpa.talk</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>nextcloudtalk</string>

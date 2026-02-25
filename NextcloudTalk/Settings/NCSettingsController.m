@@ -48,6 +48,7 @@ NSString * const kPreferredFileSorting          = @"preferredFileSorting";
 NSString * const kContactSyncEnabled            = @"contactSyncEnabled";
 
 NSString * const kDidReceiveCallsFromOldAccount = @"receivedCallsFromOldAccount";
+NSString * const kAppThemeSetting = @"appThemeSetting";
 
 + (NCSettingsController *)sharedInstance
 {
@@ -344,6 +345,49 @@ NSString * const kDidReceiveCallsFromOldAccount = @"receivedCallsFromOldAccount"
 - (void)setDidReceiveCallsFromOldAccount:(BOOL)receivedOldCalls
 {
     [[NSUserDefaults standardUserDefaults] setObject:@(receivedOldCalls) forKey:kDidReceiveCallsFromOldAccount];
+}
+
+#pragma mark - App Theme
+
+- (NCAppTheme)getAppTheme
+{
+    NSInteger theme = [[[NSUserDefaults standardUserDefaults] objectForKey:kAppThemeSetting] integerValue];
+    return (NCAppTheme)theme;
+}
+
+- (void)setAppTheme:(NCAppTheme)theme
+{
+    [[NSUserDefaults standardUserDefaults] setObject:@(theme) forKey:kAppThemeSetting];
+    [self applyAppTheme];
+}
+
+- (void)applyAppTheme
+{
+    NCAppTheme theme = [self getAppTheme];
+    UIUserInterfaceStyle style = UIUserInterfaceStyleUnspecified;
+    
+    switch (theme) {
+        case NCAppThemeLight:
+            style = UIUserInterfaceStyleLight;
+            break;
+        case NCAppThemeDark:
+            style = UIUserInterfaceStyleDark;
+            break;
+        default:
+            style = UIUserInterfaceStyleUnspecified;
+            break;
+    }
+    
+    // Apply to all windows
+    dispatch_async(dispatch_get_main_queue(), ^{
+        for (UIWindowScene *windowScene in [UIApplication sharedApplication].connectedScenes) {
+            if ([windowScene isKindOfClass:[UIWindowScene class]]) {
+                for (UIWindow *window in windowScene.windows) {
+                    window.overrideUserInterfaceStyle = style;
+                }
+            }
+        }
+    });
 }
 
 #pragma mark - User Profile

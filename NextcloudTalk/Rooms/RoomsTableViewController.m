@@ -255,12 +255,8 @@ typedef enum RoomsSections {
 
 - (void)setNavigationLogoButton
 {
-    UIImageView *logoImageView = [[UIImageView alloc] initWithImage:[NCAppBranding navigationLogoImage]];
-    if (!customNavigationLogo) {
-        logoImageView.tintColor = [UIColor labelColor];
-    }
-    self.navigationItem.titleView = logoImageView;
-    self.navigationItem.titleView.accessibilityLabel = talkAppName;
+    // Icon kính lúp đã được bỏ
+    self.navigationItem.titleView = nil;
 }
 
 - (void)createNewConversationButton

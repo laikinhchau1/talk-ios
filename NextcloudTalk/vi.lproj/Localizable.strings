@@ -1,0 +1,270 @@
+/* 
+  Localizable.strings
+  Nextcloud Talk
+
+  SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+  SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
+/* MARK: - Common */
+"Cancel" = "Hủy";
+"OK" = "OK";
+"Create" = "Tạo";
+"Edit" = "Chỉnh sửa";
+"Add" = "Thêm";
+"Done" = "Xong";
+"Delete" = "Xóa";
+"Save" = "Lưu";
+"Close" = "Đóng";
+"Back" = "Quay lại";
+"Search" = "Tìm kiếm";
+"Settings" = "Cài đặt";
+"Name" = "Tên";
+"Description" = "Mô tả";
+"Password" = "Mật khẩu";
+
+/* MARK: - New Conversation Screen */
+"New conversation" = "Cuộc trò chuyện mới";
+"Create a new conversation" = "Tạo cuộc trò chuyện mới";
+"Join open conversations" = "Tham gia cuộc trò chuyện mở";
+"Join a conversation or start a new one" = "Tham gia cuộc trò chuyện hoặc bắt đầu một cuộc trò chuyện mới";
+"Create or join a conversation" = "Tạo hoặc tham gia cuộc trò chuyện";
+
+/* MARK: - Room Creation */
+"Participants" = "Người tham gia";
+"Add participants" = "Thêm người tham gia";
+"Visibility" = "Hiển thị";
+"Allow guests to join this conversation via link" = "Cho phép khách tham gia cuộc trò chuyện này qua liên kết";
+"Set password" = "Đặt mật khẩu";
+"Change password" = "Thay đổi mật khẩu";
+"Remove password" = "Xóa mật khẩu";
+"Enter a password" = "Nhập mật khẩu";
+"Enter a new password" = "Nhập mật khẩu mới";
+"Open conversation to registered users" = "Mở cuộc trò chuyện cho người dùng đã đăng ký";
+"Also open to guest app users" = "Cũng mở cho người dùng ứng dụng khách";
+"Password protection" = "Bảo vệ bằng mật khẩu";
+"Conversation creation failed" = "Tạo cuộc trò chuyện thất bại";
+"Could not start group conversation" = "Không thể bắt đầu cuộc trò chuyện nhóm";
+"An error occurred while starting a new group conversation" = "Đã xảy ra lỗi khi bắt đầu cuộc trò chuyện nhóm mới";
+"No participants found" = "Không tìm thấy người tham gia";
+"Conversation name cannot be empty" = "Tên cuộc trò chuyện không được để trống";
+"Description cannot be longer than 500 characters" = "Mô tả không được dài quá 500 ký tự";
+
+/* MARK: - Settings Screen */
+"Configuration" = "Cấu hình";
+"Advanced" = "Nâng cao";
+"About" = "Giới thiệu";
+"Other Accounts" = "Tài khoản khác";
+"Account" = "Tài khoản";
+"Accounts" = "Tài khoản";
+"Add account" = "Thêm tài khoản";
+"Log out" = "Đăng xuất";
+"Remove account" = "Xóa tài khoản";
+"Do you really want to log out from this account?" = "Bạn có thực sự muốn đăng xuất khỏi tài khoản này?";
+"Do you really want to remove this account?" = "Bạn có thực sự muốn xóa tài khoản này?";
+
+/* MARK: - Account Settings */
+"Read status" = "Trạng thái đọc";
+"Typing indicator" = "Trình báo đang nhập";
+"Typing indicators are only available when using a high performance backend (HPB)" = "Trình báo đang nhập chỉ khả dụng khi sử dụng backend hiệu suất cao (HPB)";
+"Phone number integration" = "Tích hợp số điện thoại";
+"Match system contacts" = "Đồng bộ danh bạ hệ thống";
+"Contact access has been denied" = "Quyền truy cập danh bạ đã bị từ chối";
+"Last sync" = "Đồng bộ lần cuối";
+"Missing phone number information" = "Thiếu thông tin số điện thoại";
+"Phone number" = "Số điện thoại";
+"You can set your phone number so other users will be able to find you" = "Bạn có thể đặt số điện thoại để người dùng khác có thể tìm thấy bạn";
+"Set" = "Đặt";
+"Skip" = "Bỏ qua";
+"Could not set phone number" = "Không thể đặt số điện thoại";
+"An error occurred while setting phone number" = "Đã xảy ra lỗi khi đặt số điện thoại";
+"Phone number set successfully" = "Đã đặt số điện thoại thành công";
+"Retry" = "Thử lại";
+
+/* MARK: - Configuration */
+"Video quality" = "Chất lượng video";
+"Include calls in call history" = "Bao gồm cuộc gọi trong lịch sử cuộc gọi";
+
+/* MARK: - Advanced Settings */
+"Diagnostics" = "Chẩn đoán";
+"Cached images" = "Hình ảnh đã lưu cache";
+"Cached files" = "Tệp đã lưu cache";
+"Clear cache" = "Xóa cache";
+"Do you really want to clear the image cache?" = "Bạn có thực sự muốn xóa cache hình ảnh?";
+"Do you really want to clear the file cache?" = "Bạn có thực sự muốn xóa cache tệp?";
+"Calls from old accounts" = "Cuộc gọi từ tài khoản cũ";
+
+/* MARK: - About Section */
+"Privacy" = "Quyền riêng tư";
+"Source code" = "Mã nguồn";
+"Get source code" = "Lấy mã nguồn";
+
+/* MARK: - User Status */
+"Online status" = "Trạng thái trực tuyến";
+"Online" = "Trực tuyến";
+"Away" = "Vắng mặt";
+"Do not disturb" = "Không làm phiền";
+"Invisible" = "Ẩn";
+"All notifications are muted" = "Tất cả thông báo đã bị tắt tiếng";
+"Fetching status …" = "Đang lấy trạng thái …";
+"Status message" = "Tin nhắn trạng thái";
+"Clear status message" = "Xóa tin nhắn trạng thái";
+"An error occurred while clearing status message" = "Đã xảy ra lỗi khi xóa tin nhắn trạng thái";
+
+/* MARK: - Notifications */
+"Notifications" = "Thông báo";
+"All messages" = "Tất cả tin nhắn";
+"@-mentions only" = "Chỉ @-đề cập";
+"None" = "Không có";
+"Notify about calls" = "Thông báo về cuộc gọi";
+"Call notifications" = "Thông báo cuộc gọi";
+
+/* MARK: - Errors */
+"An error occurred changing read status setting" = "Đã xảy ra lỗi khi thay đổi cài đặt trạng thái đọc";
+"An error occurred changing typing privacy setting" = "Đã xảy ra lỗi khi thay đổi cài đặt quyền riêng tư nhập liệu";
+"Could not change read-only state of the conversation" = "Không thể thay đổi trạng thái chỉ đọc của cuộc trò chuyện";
+"Could not change notifications setting" = "Không thể thay đổi cài đặt thông báo";
+
+/* MARK: - Profile */
+"Profile" = "Hồ sơ";
+"Profile picture" = "Ảnh đại diện";
+"Full name" = "Họ và tên";
+"Email" = "Email";
+"Website" = "Trang web";
+"Address" = "Địa chỉ";
+"Twitter" = "Twitter";
+
+/* MARK: - Calls */
+"Calls" = "Cuộc gọi";
+"Call" = "Gọi";
+"Video call" = "Gọi video";
+"Voice call" = "Gọi thoại";
+"Join call" = "Tham gia cuộc gọi";
+"Leave call" = "Rời khỏi cuộc gọi";
+"End call" = "Kết thúc cuộc gọi";
+"Start call" = "Bắt đầu cuộc gọi";
+"Incoming call" = "Cuộc gọi đến";
+"Outgoing call" = "Cuộc gọi đi";
+"Missed call" = "Cuộc gọi nhỡ";
+"Call in progress" = "Cuộc gọi đang diễn ra";
+
+/* MARK: - Chat */
+"Chat" = "Trò chuyện";
+"Send" = "Gửi";
+"Message" = "Tin nhắn";
+"Messages" = "Tin nhắn";
+"Reply" = "Trả lời";
+"Forward" = "Chuyển tiếp";
+"Copy" = "Sao chép";
+"Share" = "Chia sẻ";
+"Delete message" = "Xóa tin nhắn";
+"Edit message" = "Chỉnh sửa tin nhắn";
+"You" = "Bạn";
+"Today" = "Hôm nay";
+"Yesterday" = "Hôm qua";
+
+/* MARK: - Conversations */
+"Conversations" = "Cuộc trò chuyện";
+"Conversation" = "Cuộc trò chuyện";
+"Add to favorites" = "Thêm vào yêu thích";
+"Remove from favorites" = "Xóa khỏi yêu thích";
+"Leave conversation" = "Rời khỏi cuộc trò chuyện";
+"Delete conversation" = "Xóa cuộc trò chuyện";
+"Do you really want to delete this conversation?" = "Bạn có thực sự muốn xóa cuộc trò chuyện này?";
+"Do you really want to delete all messages in this conversation?" = "Bạn có thực sự muốn xóa tất cả tin nhắn trong cuộc trò chuyện này?";
+"Do you really want to delete this conversation for everyone?" = "Bạn có thực sự muốn xóa cuộc trò chuyện này cho mọi người?";
+
+/* MARK: - File uploads */
+"Photos" = "Ảnh";
+"Files" = "Tệp";
+"Camera" = "Máy ảnh";
+"Photo Library" = "Thư viện ảnh";
+"File uploads" = "Tải lên tệp";
+
+/* MARK: - Permissions */
+"Microphone" = "Micrô";
+"Camera" = "Máy ảnh";
+"Camera access" = "Quyền truy cập máy ảnh";
+"Microphone access" = "Quyền truy cập micrô";
+"Camera access is not allowed. Check your settings." = "Quyền truy cập máy ảnh không được cho phép. Kiểm tra cài đặt của bạn.";
+"Microphone access is not allowed. Check your settings." = "Quyền truy cập micrô không được cho phép. Kiểm tra cài đặt của bạn.";
+
+/* MARK: - Network */
+"Network not available" = "Mạng không khả dụng";
+"Network available" = "Mạng khả dụng";
+"No internet connection" = "Không có kết nối internet";
+"It seems that there is no internet connection." = "Có vẻ như không có kết nối internet.";
+"Connecting to %@ …" = "Đang kết nối đến %@ …";
+"Invalid server address" = "Địa chỉ máy chủ không hợp lệ";
+"Nextcloud server not found" = "Không tìm thấy máy chủ Nextcloud";
+
+/* MARK: - Login */
+"Log in" = "Đăng nhập";
+"Account already added" = "Tài khoản đã được thêm";
+"Account not configured" = "Tài khoản chưa được cấu hình";
+"Account not found" = "Không tìm thấy tài khoản";
+"Credentials for this account were no longer valid" = "Thông tin xác thực cho tài khoản này không còn hợp lệ";
+
+/* MARK: - Polls */
+"Poll" = "Bình chọn";
+"Polls" = "Các bình chọn";
+"Create poll" = "Tạo bình chọn";
+"Question" = "Câu hỏi";
+"Answers" = "Các câu trả lời";
+"Results" = "Kết quả";
+"Anonymous poll" = "Bình chọn ẩn danh";
+"Multiple answers" = "Nhiều câu trả lời";
+"End poll" = "Kết thúc bình chọn";
+
+/* MARK: - Recording */
+"Recording" = "Đang ghi âm";
+"Recordings" = "Các bản ghi âm";
+"Call recording started" = "Đã bắt đầu ghi âm cuộc gọi";
+"Call recording stopped" = "Đã dừng ghi âm cuộc gọi";
+"Call recording is starting" = "Đang bắt đầu ghi âm cuộc gọi";
+
+/* MARK: - Reactions */
+"Add reaction" = "Thêm cảm xúc";
+"Reactions" = "Cảm xúc";
+"Send a reaction" = "Gửi cảm xúc";
+
+/* MARK: - Location */
+"Location" = "Vị trí";
+"Share location" = "Chia sẻ vị trí";
+"My location" = "Vị trí của tôi";
+"Nearby places" = "Địa điểm lân cận";
+
+/* MARK: - Time */
+"Today" = "Hôm nay";
+"Yesterday" = "Hôm qua";
+"Tomorrow" = "Ngày mai";
+"Now" = "Bây giờ";
+"an hour" = "một giờ";
+"hours" = "giờ";
+"days" = "ngày";
+"minutes" = "phút";
+"1 day" = "1 ngày";
+"1 hour" = "1 giờ";
+"1 week" = "1 tuần";
+
+/* MARK: - Guest access */
+"Guest" = "Khách";
+"guest" = "khách";
+"Guests access" = "Quyền truy cập của khách";
+
+/* MARK: - Additional common strings */
+"More" = "Thêm";
+"More actions" = "Thêm hành động";
+"Details" = "Chi tiết";
+"Info" = "Thông tin";
+"Copy link" = "Sao chép liên kết";
+"Link copied" = "Đã sao chép liên kết";
+"Open" = "Mở";
+"Open in %@" = "Mở trong %@";
+"Open in Safari" = "Mở trong Safari";
+"Loading …" = "Đang tải …";
+"Error" = "Lỗi";
+"Warning" = "Cảnh báo";
+"Success" = "Thành công";
+"Pending" = "Đang chờ";
+"Unsent" = "Chưa gửi";

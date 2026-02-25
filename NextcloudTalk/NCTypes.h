@@ -201,4 +201,10 @@ typedef NS_ENUM(NSInteger, DetailedOptionsSelectorType) {
     DetailedOptionsSelectorTypeAccounts
 };
 
+typedef NS_ENUM(NSInteger, NCAppTheme) {
+    NCAppThemeSystem = 0,
+    NCAppThemeLight,
+    NCAppThemeDark
+} NS_SWIFT_NAME(NCAppTheme);
+
 #endif

@@ -28,6 +28,8 @@ extern NSString * const kUserProfileScopeLocal;
 extern NSString * const kUserProfileScopeFederated;
 extern NSString * const kUserProfileScopePublished;
 
+extern NSString * const kAppThemeSetting;
+
 extern NSString * const NCSettingsControllerDidChangeActiveAccountNotification;
 
 @class NCExternalSignalingController;
@@ -77,5 +79,8 @@ typedef void (^EnsureSignalingConfigCompletionBlock)(NCExternalSignalingControll
 - (BOOL)didReceiveCallsFromOldAccount;
 - (void)setDidReceiveCallsFromOldAccount:(BOOL)receivedOldCalls;
 - (void)createAccountsFile;
+- (NCAppTheme)getAppTheme;
+- (void)setAppTheme:(NCAppTheme)theme;
+- (void)applyAppTheme;
 
 @end

@@ -30,6 +30,7 @@ enum AccountSettingsOptions: Int {
 enum ConfigurationSectionOption: Int {
     case kConfigurationSectionOptionVideo = 0
     case kConfigurationSectionOptionRecents
+    case kConfigurationSectionOptionTheme
 }
 
 enum AdvancedSectionOption: Int {
@@ -184,6 +185,9 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate, U
 
         // Calls in recents
         options.append(ConfigurationSectionOption.kConfigurationSectionOptionRecents.rawValue)
+        
+        // Theme
+        options.append(ConfigurationSectionOption.kConfigurationSectionOptionTheme.rawValue)
 
         return options
     }
@@ -429,6 +433,49 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate, U
         optionsActionSheet.popoverPresentationController?.sourceView = self.tableView
         optionsActionSheet.popoverPresentationController?.sourceRect = self.tableView.rectForRow(at: videoConfIndexPath)
 
+        self.present(optionsActionSheet, animated: true, completion: nil)
+    }
+    
+    // MARK: - Theme
+    
+    func themeName(_ theme: NCAppTheme) -> String {
+        switch theme {
+        case .light:
+            return NSLocalizedString("Light", comment: "")
+        case .dark:
+            return NSLocalizedString("Dark", comment: "")
+        default:
+            return NSLocalizedString("System", comment: "")
+        }
+    }
+    
+    func presentThemeSelector() {
+        let themeIndexPath = self.getIndexPathForConfigurationOption(option: ConfigurationSectionOption.kConfigurationSectionOptionTheme)
+        let currentTheme = NCSettingsController.sharedInstance().getAppTheme()
+        
+        let optionsActionSheet = UIAlertController(title: NSLocalizedString("Appearance", comment: ""), message: nil, preferredStyle: .actionSheet)
+        
+        let themes: [NCAppTheme] = [.system, .light, .dark]
+        
+        for theme in themes {
+            let action = UIAlertAction(title: themeName(theme), style: .default) { _ in
+                NCSettingsController.sharedInstance().setAppTheme(theme)
+                self.tableView.beginUpdates()
+                self.tableView.reloadRows(at: [themeIndexPath], with: .none)
+                self.tableView.endUpdates()
+            }
+            if theme == currentTheme {
+                action.setValue(UIImage(named: "checkmark")?.withRenderingMode(.alwaysOriginal), forKey: "image")
+            }
+            optionsActionSheet.addAction(action)
+        }
+        
+        optionsActionSheet.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
+        
+        // Presentation on iPads
+        optionsActionSheet.popoverPresentationController?.sourceView = self.tableView
+        optionsActionSheet.popoverPresentationController?.sourceRect = self.tableView.rectForRow(at: themeIndexPath)
+        
         self.present(optionsActionSheet, animated: true, completion: nil)
     }
 
@@ -746,6 +793,8 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate, U
         switch option {
         case ConfigurationSectionOption.kConfigurationSectionOptionVideo.rawValue:
             self.presentVideoResoultionsSelector()
+        case ConfigurationSectionOption.kConfigurationSectionOptionTheme.rawValue:
+            self.presentThemeSelector()
         default:
             break
         }
@@ -917,6 +966,20 @@ extension SettingsTableViewController {
             cell.selectionStyle = .none
             cell.accessoryView = includeInRecentsSwitch
             includeInRecentsSwitch.isOn = NCUserDefaults.includeCallsInRecents()
+            return cell
+            
+        case ConfigurationSectionOption.kConfigurationSectionOptionTheme.rawValue:
+            let cell: SettingsTableViewCell = tableView.dequeueOrCreateCell(withIdentifier: configurationCellIdentifier, style: .default)
+            cell.textLabel?.text = NSLocalizedString("Appearance", comment: "")
+            cell.setSettingsImage(image: UIImage(systemName: "circle.lefthalf.filled")?.applyingSymbolConfiguration(iconConfiguration))
+            
+            let theme = NCSettingsController.sharedInstance().getAppTheme()
+            let themeLabel = UILabel()
+            themeLabel.text = self.themeName(theme)
+            themeLabel.textColor = .secondaryLabel
+            themeLabel.sizeToFit()
+            cell.accessoryView = themeLabel
+            
             return cell
 
         default:
