@@ -1,5 +1,5 @@
 //
-// SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+// SPDX-FileCopyrightText: 2024 HPA Cloud and HPACloud contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
 //
 
@@ -925,7 +925,7 @@ class NCRoomsManager: NSObject, CallViewControllerDelegate {
                 // Not joining the room any more. Ignore response
                 return
             } else if statusCode == NCRoomsManager.statusCodeShouldIgnoreAttemptButJoinedSuccessfully {
-                // We joined the Nextcloud server successfully, but locally we are not trying to join that room anymore.
+                // We joined the HPACloud server successfully, but locally we are not trying to join that room anymore.
                 // We need to make sure that we leave the room on the server again to not leave an active session.
                 // Do a direct API call here, as the join method will check for an active NCRoomController, which we don't have
 
@@ -1052,7 +1052,7 @@ class NCRoomsManager: NSObject, CallViewControllerDelegate {
                     // If the sessionId is not the same anymore we tried to join with, we either already left again before
                     // joining the external signaling server succeeded, or we already have another join in process
                     if !self.isJoiningRoom(withToken: token) {
-                        NCUtils.log("Not joining the room any more. Ignore external signaling completion block, but we joined the Nextcloud instance before.")
+                        NCUtils.log("Not joining the room any more. Ignore external signaling completion block, but we joined the HPACloud instance before.")
                         completionBlock(nil, nil, nil, NCRoomsManager.statusCodeShouldIgnoreAttemptButJoinedSuccessfully, nil)
                         return
                     }

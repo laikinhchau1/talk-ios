@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Based on the script from Milen Pivchev in nextcloud/ios repository
 
-# SPDX-FileCopyrightText: 2023 Nextcloud GmbH and Nextcloud contributors
+# SPDX-FileCopyrightText: 2023 HPA Cloud and HPACloud contributors
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # This script downloads and installs talk

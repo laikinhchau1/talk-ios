@@ -1,5 +1,5 @@
 //
-// SPDX-FileCopyrightText: 2025 Nextcloud GmbH and Nextcloud contributors
+// SPDX-FileCopyrightText: 2025 HPA Cloud and HPACloud contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
 //
 
@@ -104,7 +104,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, CCCertificateD
         cancelButton.setTitleColor(NCAppBranding.brandTextColor(), for: .normal)
         cancelButton.isHidden = !(multiAccountEnabled.boolValue && NCDatabaseManager.sharedInstance().numberOfAccounts() > 0)
 
-        // Check for Nextcloud Files app accounts
+        // Check for HPACloud Files app accounts
         checkFilesAppAccounts()
 
         // Add tap gesture recognizer to dismiss keyboard
@@ -184,7 +184,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, CCCertificateD
         activityIndicatorView.startAnimating()
         activityIndicatorView.isHidden = false
 
-        // Check if valid Nextcloud server
+        // Check if valid HPACloud server
         NCAPIController.sharedInstance().getServerCapabilities(forServer: normalizedServerURL) { serverCapabilities, error in
             self.activityIndicatorView.stopAnimating()
             self.activityIndicatorView.isHidden = true
@@ -328,13 +328,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate, CCCertificateD
         } else {
             if let error {
                 self.showAlert(
-                    title: NSLocalizedString("Nextcloud server not found", comment: ""),
-                    message: String(format: "%@\n%@", error, NSLocalizedString("Please check that you entered the correct Nextcloud server address.", comment: "")))
+                    title: NSLocalizedString("HPACloud server not found", comment: ""),
+                    message: String(format: "%@\n%@", error, NSLocalizedString("Please check that you entered the correct HPACloud server address.", comment: "")))
 
             } else {
                 self.showAlert(
-                    title: NSLocalizedString("Nextcloud server not found", comment: ""),
-                    message: NSLocalizedString("Please check that you entered the correct Nextcloud server address.", comment: ""))
+                    title: NSLocalizedString("HPACloud server not found", comment: ""),
+                    message: NSLocalizedString("Please check that you entered the correct HPACloud server address.", comment: ""))
             }
         }
     }

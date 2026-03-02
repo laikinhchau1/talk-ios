@@ -1,5 +1,5 @@
 /**
- * SPDX-FileCopyrightText: 2020 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-FileCopyrightText: 2020 HPA Cloud and HPACloud contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -19,8 +19,8 @@ typedef enum NCTextColorStyle {
 #pragma mark - App configuration
 
 NSString * const talkAppName = @"HPA Talk";
-NSString * const filesAppName = @"Nextcloud";
-NSString * const copyright = @"© 2026 Nextcloud GmbH";
+NSString * const filesAppName = @"HPACloud";
+NSString * const copyright = @"© 2026 HPA Cloud";
 NSString * const bundleIdentifier = @"com.hpa.talk";
 NSString * const groupIdentifier = @"group.com.hpa.talk";
 NSString * const appsGroupIdentifier = @"group.com.hpa.apps";

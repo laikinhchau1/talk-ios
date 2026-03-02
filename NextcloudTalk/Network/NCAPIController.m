@@ -1,5 +1,5 @@
 /**
- * SPDX-FileCopyrightText: 2020 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-FileCopyrightText: 2020 HPA Cloud and HPACloud contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -123,7 +123,7 @@ NSInteger const kReceivedChatMessagesLimit = 100;
 {
     ServerCapabilities *serverCapabilities = [[NCDatabaseManager sharedInstance] serverCapabilitiesForAccountId:account.accountId];
     NSString *userToken = [[NCKeyChainController sharedInstance] tokenForAccountId:account.accountId];
-    NSString *userAgent = [NSString stringWithFormat:@"Mozilla/5.0 (iOS) Nextcloud-Talk v%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+    NSString *userAgent = [NSString stringWithFormat:@"Mozilla/5.0 (iOS) HPACloud-Talk v%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
     [[NextcloudKit shared] setupWithAccount:account.accountId user:account.user userId:account.userId password:userToken urlBase:account.server userAgent:userAgent nextcloudVersion:serverCapabilities.versionMajor delegate:self];
 }
 
@@ -2825,8 +2825,8 @@ NSInteger const kReceivedChatMessagesLimit = 100;
 
 - (void)checkResponseHeaders:(NSDictionary *)headers forAccount:(TalkAccount *)account
 {
-    NSString *modifiedSince = [headers objectForKey:@"X-Nextcloud-Talk-Modified-Before"];
-    NSString *configurationHash = [headers objectForKey:@"X-Nextcloud-Talk-Hash"];
+    NSString *modifiedSince = [headers objectForKey:@"X-HPACloud-Talk-Modified-Before"];
+    NSString *configurationHash = [headers objectForKey:@"X-HPACloud-Talk-Hash"];
     
     if (modifiedSince.length > 0) {
         [[NCDatabaseManager sharedInstance] updateLastModifiedSinceForAccountId:account.accountId with:modifiedSince];
@@ -2854,7 +2854,7 @@ NSInteger const kReceivedChatMessagesLimit = 100;
 
 - (void)checkProxyResponseHeaders:(NSDictionary *)headers forAccount:(TalkAccount *)account forRoom:(NSString *)token
 {
-    NSString *proxyHash = [headers objectForKey:@"X-Nextcloud-Talk-Proxy-Hash"];
+    NSString *proxyHash = [headers objectForKey:@"X-HPACloud-Talk-Proxy-Hash"];
 
     if (!proxyHash) {
         return;

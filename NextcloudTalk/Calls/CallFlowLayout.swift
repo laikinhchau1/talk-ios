@@ -1,5 +1,5 @@
 //
-// SPDX-FileCopyrightText: 2022 Nextcloud GmbH and Nextcloud contributors
+// SPDX-FileCopyrightText: 2022 HPA Cloud and HPACloud contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 // Based on https://stackoverflow.com/a/41409642

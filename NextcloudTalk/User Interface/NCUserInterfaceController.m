@@ -1,5 +1,5 @@
 /**
- * SPDX-FileCopyrightText: 2020 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-FileCopyrightText: 2020 HPA Cloud and HPACloud contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -504,7 +504,7 @@
 {
     [_mainViewController dismissViewControllerAnimated:YES completion:^{
         [[NCConnectionController shared] checkAppState];
-        // Get server capabilities again to check if user is allowed to use Nextcloud Talk
+        // Get server capabilities again to check if user is allowed to use HPACloud Talk
         TalkAccount *activeAccount = [[NCDatabaseManager sharedInstance] activeAccount];
         [[NCSettingsController sharedInstance] getCapabilitiesForAccountId:activeAccount.accountId withCompletionBlock:nil];
     }];
@@ -516,7 +516,7 @@
 {
     [_mainViewController dismissViewControllerAnimated:YES completion:^{
         [[NCConnectionController shared] checkAppState];
-        // Get server capabilities again to check if user is allowed to use Nextcloud Talk
+        // Get server capabilities again to check if user is allowed to use HPACloud Talk
         TalkAccount *activeAccount = [[NCDatabaseManager sharedInstance] activeAccount];
         [[NCSettingsController sharedInstance] getCapabilitiesForAccountId:activeAccount.accountId withCompletionBlock:nil];
     }];

@@ -1,8 +1,8 @@
 /* 
   Localizable.strings
-  Nextcloud Talk
+  HPACloud Talk
 
-  SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+  SPDX-FileCopyrightText: 2024 HPA Cloud and HPACloud contributors
   SPDX-License-Identifier: GPL-3.0-or-later
 */
 
@@ -196,7 +196,7 @@
 "It seems that there is no internet connection." = "Có vẻ như không có kết nối internet.";
 "Connecting to %@ …" = "Đang kết nối đến %@ …";
 "Invalid server address" = "Địa chỉ máy chủ không hợp lệ";
-"Nextcloud server not found" = "Không tìm thấy máy chủ Nextcloud";
+"HPACloud server not found" = "Không tìm thấy máy chủ HPACloud";
 
 /* MARK: - Login */
 "Log in" = "Đăng nhập";

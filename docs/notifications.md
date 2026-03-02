@@ -18,7 +18,7 @@ Please note that under rare circumstances apple will stop sending (call-)notific
 
 - Check that your phone is not in `do not disturb` or any `focus` (iOS >= 15) mode
 - Check that your phone has internet access
-- Check that notifications for `Nextcloud Talk` are allowed (Settings -> Nextcloud Talk -> Notifications)
+- Check that notifications for `HPACloud Talk` are allowed (Settings -> HPACloud Talk -> Notifications)
   - `Allow notifications` should be turned on
   - All other settings depend on what you want to achieve. You can enable/disable notifications on the lockscreen or enable/disable the apps badge for example
  
@@ -34,8 +34,8 @@ Please note that under rare circumstances apple will stop sending (call-)notific
 
 ## 🔒 Check app sessions
 
-- Using the web interface go to your Nextcloud "Settings" -> "Security"
-- Under "Devices & sessions" check if there are duplicate entries for the same device (e.g. iPhone (Nextcloud Talk))
+- Using the web interface go to your HPACloud "Settings" -> "Security"
+- Under "Devices & sessions" check if there are duplicate entries for the same device (e.g. iPhone (HPACloud Talk))
 - Remove old duplicate entries and just leave the entry with the most recent "Last activity"
 
 ## 🖥 Check server settings
@@ -71,7 +71,7 @@ If it prints something like
 sudo -u www-data php /var/www/yourinstance/occ notification:test-push --talk youruser
 No devices found for user
 ```
-or you won't receive a notification after waiting a few minutes, try to remove the account from the Nextcloud iOS Talk app and log in again. Afterwards try to run the command
+or you won't receive a notification after waiting a few minutes, try to remove the account from the HPACloud iOS Talk app and log in again. Afterwards try to run the command
  again.
  
 If it prints

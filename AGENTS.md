@@ -1,8 +1,8 @@
-# Nextcloud Talk iOS - Agent Guide
+# HPACloud Talk iOS - Agent Guide
 
 ## Project Overview
 
-**Nextcloud Talk iOS** is a fully on-premises audio/video and chat communication app for iOS devices. It connects to Nextcloud servers to provide secure messaging, voice calls, video conferences, and file sharing capabilities.
+**HPACloud Talk iOS** is a fully on-premises audio/video and chat communication app for iOS devices. It connects to HPACloud servers to provide secure messaging, voice calls, video conferences, and file sharing capabilities.
 
 - **Repository**: https://github.com/nextcloud/talk-ios
 - **License**: GPLv3 with Apple App Store exception
@@ -64,7 +64,7 @@ The main app is organized into feature-based directories:
 
 **Core Infrastructure:**
 - `AppDelegate.h/m` - Application lifecycle, push notification handling
-- `NCAPIController.h/m` - Main API client for Nextcloud server communication
+- `NCAPIController.h/m` - Main API client for HPACloud server communication
 - `NCDatabaseManager.h/m` - Realm database management
 - `NCSettingsController.h/m` - App settings and configuration
 
@@ -77,7 +77,7 @@ The main app is organized into feature-based directories:
 The project includes 4 extensions that require separate bundle IDs and entitlements:
 
 1. **ShareExtension** (`ShareExtension/`)
-   - Allows sharing content from other apps to Nextcloud Talk
+   - Allows sharing content from other apps to HPACloud Talk
    - Uses `ShareViewController` for room selection
 
 2. **NotificationServiceExtension** (`NotificationServiceExtension/`)
@@ -116,7 +116,7 @@ open NextcloudTalk.xcworkspace
 
 ### Bundle Identifier Configuration (Required for Development)
 
-The project uses Nextcloud's bundle identifiers by default. To run on your developer account:
+The project uses HPACloud's bundle identifiers by default. To run on your developer account:
 
 1. **Change bundle IDs** for all 5 targets from `com.nextcloud.Talk` to `com.<yourname>.Talk`
 2. **Change App Group IDs** from `group.com.nextcloud.Talk` to `group.com.<yourname>.Talk`
@@ -173,7 +173,7 @@ NextcloudTalkTests/
 
 ### Running Tests Locally
 
-Integration tests require a running Nextcloud server:
+Integration tests require a running HPACloud server:
 
 ```bash
 # Start Docker-based test server
@@ -183,7 +183,7 @@ Integration tests require a running Nextcloud server:
 ```
 
 The test script:
-1. Creates a Docker container with Nextcloud server
+1. Creates a Docker container with HPACloud server
 2. Installs the Talk app (spreed)
 3. Sets up test users and rooms via `ci-setup-rooms.sh`
 4. Waits for server to be ready
@@ -226,7 +226,7 @@ GitHub Actions tests against multiple server versions:
 1. **File Headers**: All files must include SPDX license headers:
    ```objc
    /**
-    * SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+    * SPDX-FileCopyrightText: 2024 HPA Cloud and HPACloud contributors
     * SPDX-License-Identifier: GPL-3.0-or-later
     */
    ```
@@ -245,7 +245,7 @@ GitHub Actions tests against multiple server versions:
 ### API Communication (`NCAPIController`)
 
 The main API controller handles all server communication:
-- REST API calls to Nextcloud Talk endpoints
+- REST API calls to HPACloud Talk endpoints
 - Multiple API version support (v1-v4)
 - AFNetworking-based session management
 - Completion block-based async patterns
@@ -262,7 +262,7 @@ Uses Realm for local data persistence:
 
 - PushKit integration for VoIP notifications
 - Normal push notifications for messages
-- Device token registration with Nextcloud push proxy
+- Device token registration with HPACloud push proxy
 
 ### Call System
 
@@ -275,7 +275,7 @@ Uses Realm for local data persistence:
 1. **App Groups**: Used for data sharing between app and extensions
 2. **Keychain**: Credentials stored via `NCKeyChainController`
 3. **Certificate Pinning**: Available in `CCCertificate`
-4. **Push Proxy**: Notifications go through Nextcloud's push proxy (not Apple directly)
+4. **Push Proxy**: Notifications go through HPACloud's push proxy (not Apple directly)
 
 ## CI/CD Workflow
 
@@ -295,7 +295,7 @@ Uses Realm for local data persistence:
 | Script | Purpose |
 |--------|---------|
 | `start-instance-for-tests.sh` | Start local Docker test environment |
-| `ci-create-docker-server.sh` | Create Nextcloud Docker container |
+| `ci-create-docker-server.sh` | Create HPACloud Docker container |
 | `ci-install-talk.sh` | Install Talk app in test server |
 | `ci-setup-rooms.sh` | Create test rooms and users |
 | `ci-wait-for-server.sh` | Wait for server to be ready |

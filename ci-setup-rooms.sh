@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# SPDX-FileCopyrightText: 2024 Nextcloud GmbH and Nextcloud contributors
+# SPDX-FileCopyrightText: 2024 HPA Cloud and HPACloud contributors
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 # This script is intended to setup specific rooms that we want to test

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Nextcloud GmbH and Nextcloud contributors
+# SPDX-FileCopyrightText: 2023 HPA Cloud and HPACloud contributors
 # SPDX-License-Identifier: MIT
 
 name: Build main target
@@ -160,7 +160,7 @@ jobs:
       working-directory: server/apps/spreed
       run: composer i --no-dev 
 
-    - name: Set up Nextcloud
+    - name: Set up HPACloud
       run: |
         mkdir server/data
         ./server/occ maintenance:install --verbose --database=sqlite --admin-user admin --admin-pass admin --admin-email admin@local.invalid

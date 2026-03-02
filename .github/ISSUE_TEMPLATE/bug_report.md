@@ -29,7 +29,7 @@ Tell us what happens instead
 
 ## Server information
 
-**Nextcloud version:** (see admin overview page: `/index.php/settings/admin/overview`)
+**HPACloud version:** (see admin overview page: `/index.php/settings/admin/overview`)
 
 **Talk version:** (see apps admin page: `/index.php/settings/apps`)
 

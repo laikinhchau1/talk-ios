@@ -1,5 +1,5 @@
 /**
- * SPDX-FileCopyrightText: 2022 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-FileCopyrightText: 2022 HPA Cloud and HPACloud contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -36,7 +36,7 @@
 
     self = [super initWithSessionConfiguration:configuration];
     if (self) {
-        _userAgent = [NSString stringWithFormat:@"Mozilla/5.0 (iOS) Nextcloud-Talk v%@",
+        _userAgent = [NSString stringWithFormat:@"Mozilla/5.0 (iOS) HPACloud-Talk v%@",
                       [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
         
         self.responseSerializer = [[AFImageResponseSerializer alloc] init];

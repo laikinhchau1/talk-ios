@@ -1,5 +1,5 @@
 /**
- * SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-FileCopyrightText: 2021 HPA Cloud and HPACloud contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 

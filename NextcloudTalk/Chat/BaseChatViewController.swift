@@ -1,5 +1,5 @@
 //
-// SPDX-FileCopyrightText: 2023 Nextcloud GmbH and Nextcloud contributors
+// SPDX-FileCopyrightText: 2023 HPA Cloud and HPACloud contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
 //
 
@@ -264,7 +264,7 @@ import SwiftUI
 
         self.showSendMessageButton()
         self.leftButton.setImage(UIImage(systemName: "plus"), for: .normal)
-        self.leftButton.accessibilityLabel = NSLocalizedString("Share a file from your Nextcloud", comment: "")
+        self.leftButton.accessibilityLabel = NSLocalizedString("Share a file from your HPACloud", comment: "")
         self.leftButton.accessibilityHint = NSLocalizedString("Double tap to open file browser", comment: "")
         self.leftButton.accessibilityIdentifier = "shareButton"
 

@@ -1,5 +1,5 @@
 //
-// SPDX-FileCopyrightText: 2023 Nextcloud GmbH and Nextcloud contributors
+// SPDX-FileCopyrightText: 2023 HPA Cloud and HPACloud contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
 //
 
@@ -276,7 +276,7 @@ final class UIRoomTest: XCTestCase {
         // Check that there's no activity indicator
         XCTAssertEqual(app.activityIndicators.count, 0)
 
-        let shareButton = app.buttons["Share a file from your Nextcloud"]
+        let shareButton = app.buttons["Share a file from your HPACloud"]
         XCTAssert(!shareButton.exists)
 
         // Check that there's no inputbar

@@ -1,5 +1,5 @@
 //
-// SPDX-FileCopyrightText: 2022 Nextcloud GmbH and Nextcloud contributors
+// SPDX-FileCopyrightText: 2022 HPA Cloud and HPACloud contributors
 // SPDX-License-Identifier: GPL-3.0-or-later
 //
 
@@ -216,10 +216,10 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate, U
         // Privacy
         options.append(AboutSection.kAboutSectionPrivacy.rawValue)
 
-        // Source code
-        if !isBrandedApp.boolValue {
-            options.append(AboutSection.kAboutSectionSourceCode.rawValue)
-        }
+        // Source code - commented out
+        // if !isBrandedApp.boolValue {
+        //     options.append(AboutSection.kAboutSectionSourceCode.rawValue)
+        // }
 
         return options
     }
@@ -822,13 +822,14 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate, U
         let option = options[indexPath.row]
         switch option {
         case AboutSection.kAboutSectionPrivacy.rawValue:
-            if let url = URL(string: privacyURL), ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
+            if let url = URL(string: "https://talk.apps.vn/privacy/"), ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
                 let safariVC = SFSafariViewController(url: url)
                 self.present(safariVC, animated: true, completion: nil)
             }
-        case AboutSection.kAboutSectionSourceCode.rawValue:
-            let safariVC = SFSafariViewController(url: URL(string: "https://github.com/nextcloud/talk-ios")!)
-            self.present(safariVC, animated: true, completion: nil)
+        // Source code option - commented out
+        // case AboutSection.kAboutSectionSourceCode.rawValue:
+        //     let safariVC = SFSafariViewController(url: URL(string: "https://github.com/nextcloud/talk-ios")!)
+        //     self.present(safariVC, animated: true, completion: nil)
         default:
             break
         }
@@ -1060,11 +1061,12 @@ extension SettingsTableViewController {
             cell.setSettingsImage(image: UIImage(systemName: "lock.shield")?.applyingSymbolConfiguration(iconConfiguration))
             return cell
 
-        case AboutSection.kAboutSectionSourceCode.rawValue:
-            let cell: SettingsTableViewCell = tableView.dequeueOrCreateCell(withIdentifier: aboutCellIdentifier, style: .default)
-            cell.textLabel?.text = NSLocalizedString("Get source code", comment: "")
-            cell.setSettingsImage(image: UIImage(named: "github"))
-            return cell
+        // Source code option - commented out
+        // case AboutSection.kAboutSectionSourceCode.rawValue:
+        //     let cell: SettingsTableViewCell = tableView.dequeueOrCreateCell(withIdentifier: aboutCellIdentifier, style: .default)
+        //     cell.textLabel?.text = NSLocalizedString("Get source code", comment: "")
+        //     cell.setSettingsImage(image: UIImage(named: "github"))
+        //     return cell
 
         default:
             return UITableViewCell()
